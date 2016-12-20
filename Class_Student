@@ -1,0 +1,14 @@
+namespace летучка
+{
+    class Student
+    {
+        public int ApplicationNumber { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string FullName { get; set; }
+
+        public override string ToString()
+         {
+             return String.Format($"Студент {FullName}, Дата рождения - {BirthDate}, Номер - {ApplicationNumber} ");
+         }
+}
+}
