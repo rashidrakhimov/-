@@ -1,0 +1,24 @@
+namespace летучка
+{
+    class Course
+    {
+        public int Code { get; set; }
+        public string Title { get; set; }
+        public bool HasCoursePaper { get; set; }
+        public bool HasExam { get; set; }
+        public bool IsSpecial { get; set; }
+        public int LectureHours { get; set; }
+        public int PracticeHours { get; set; }
+        public List<int> Prerequisities { get; set; } = new List<int>();
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"Название курса {Title}, кол-во лекций - {LectureHours},кол-во практик - {PracticeHours}");
+            sb.Append($" Экзамен {HasExam}, Курсовая{HasCoursePaper}, Доп. курс{IsSpecial} ");
+            return sb.ToString();
+         }
+        
+       
+}
+}
+
